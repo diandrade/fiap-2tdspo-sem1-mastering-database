@@ -1,10 +1,10 @@
 set serveroutput on
+set verify off
 
 Declare
-    v_cambio number (8,2) := &valor1;
-    q_dolares v_cambio%type := &valor2;
-    v_conversao v_cambio%type;
+    v_carro number (8,2) := &valor1;
+    v_parcela v_carro%type;
     begin
-    v_conversao := q_dolares * v_cambio;
-    dbms_output.put_line('O valor da conversão cambial será de: ' || v_conversao);
+    v_parcela := v_carro / 10 * 1.03;
+    dbms_output.put_line('O valor total de cada percela será de: ' || v_parcela);
     end;

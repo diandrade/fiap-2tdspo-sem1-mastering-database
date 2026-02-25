@@ -1,4 +1,5 @@
 set serveroutput on
+set verify off
 
 Declare
     v_cambio number (8,2) := &valor1;
