@@ -19,17 +19,13 @@ DECLARE
         DBMS_OUTPUT.PUT_LINE('/ = Divisão');
         DBMS_OUTPUT.PUT_LINE('* = Multiplicação');
         IF u_op = '+' THEN
-            res := UTL_LMS.FORMAT_MESSAGE('A soma de %d e %d é %d', u_valor1, u_valor2, u_valor1 + u_valor2);
-            DBMS_OUTPUT.PUT_LINE(res);
+            DBMS_OUTPUT.PUT_LINE('A soma de ' || u_valor1 || ' e ' || u_valor2 || ' é: ' || (u_valor1 + u_valor2));
         ELSIF u_op = '-' THEN
-            res := UTL_LMS.FORMAT_MESSAGE('A subtração de %d e %d é %d', u_valor1, u_valor2, u_valor1 - u_valor2);
-            DBMS_OUTPUT.PUT_LINE(res);
+            DBMS_OUTPUT.PUT_LINE('A subtração de ' || u_valor1 || ' e ' || u_valor2 || ' é: ' || (u_valor1 - u_valor2));
         ELSIF u_op = '*' THEN
-            res := UTL_LMS.FORMAT_MESSAGE('A multiplicação de %d e %d é %d', u_valor1, u_valor2, u_valor1 * u_valor2);
-            DBMS_OUTPUT.PUT_LINE(res);
+            DBMS_OUTPUT.PUT_LINE('A multiplicação de ' || u_valor1 || ' e ' || u_valor2 || ' é: ' || u_valor1 * u_valor2);
         ELSIF u_op = '/' THEN
-            res := UTL_LMS.FORMAT_MESSAGE('A divisão de %d e %d é %d', u_valor1, u_valor2, u_valor1 * u_valor2);
-            DBMS_OUTPUT.PUT_LINE(res);
+            DBMS_OUTPUT.PUT_LINE('A divisão de ' || u_valor1 || ' e ' || u_valor2 || ' é: ' || u_valor1 / u_valor2);
         ELSE
             DBMS_OUTPUT.PUT_LINE('Insira um caráctere válido.');
         END IF;
