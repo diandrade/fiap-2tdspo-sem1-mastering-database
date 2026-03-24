@@ -3,12 +3,12 @@ SET SERVEROUTPUT ON;
 
 DECLARE
     v_contador_pares NUMBER(2) := 0;
-    v_contador_impares NUMBER(2) := 0;
+    v_contador_impares v_contador_pares%type := 0;
     v_soma_pares NUMBER(8,2) := 0;
-    v_soma_impares NUMBER(8,2) := 0;
-    v_media_pares NUMBER(8,2) := 0;
-    v_comeco NUMBER(8,2) := &v_comeco;
-    v_final NUMBER(8,2) := &v_final;
+    v_soma_impares v_soma_pares%type := 0;
+    v_media_pares v_soma_pares%type := 0;
+    v_comeco v_soma_pares%type := &v_comeco;
+    v_final v_soma_pares%type := &v_final;
     
     BEGIN
         FOR v_contador IN v_comeco..v_final LOOP
